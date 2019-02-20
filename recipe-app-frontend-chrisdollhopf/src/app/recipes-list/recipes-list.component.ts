@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipesListComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
+
+    // can i put the get request here or is a service better?
+    // need to be an array outputted
+    // 
 
   ngOnInit() {
   }

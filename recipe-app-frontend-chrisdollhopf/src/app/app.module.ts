@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RecipesListComponent } from './recipes-list/recipes-list.component';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { RecipeDetailsComponent } from './recipe-details/recipe-details.componen
     RecipeDetailsComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
