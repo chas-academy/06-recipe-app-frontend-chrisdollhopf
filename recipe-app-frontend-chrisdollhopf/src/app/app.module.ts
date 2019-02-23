@@ -3,8 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RecipesListComponent } from './recipes-list/recipes-list.component';
-import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
+import { RecipesListComponent } from './recepies/components/recipes-list/recipes-list.component';
+import { RecipeDetailsComponent } from './recepies/components/recipe-details/recipe-details.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MyRecipesComponent } from './my-recipes/my-recipes.component';
+import { RecepieContainerComponent } from './recepies/container/recepie-container/recepie-container.component';
 
 
 @NgModule({
@@ -12,6 +15,9 @@ import { RecipeDetailsComponent } from './recipe-details/recipe-details.componen
     AppComponent,
     RecipesListComponent,
     RecipeDetailsComponent,
+    NavbarComponent,
+    MyRecipesComponent,
+    RecepieContainerComponent,
   ],
   imports: [
     BrowserModule,
