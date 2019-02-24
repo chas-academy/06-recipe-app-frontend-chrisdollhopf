@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Observable } from 'rxjs';
+
+export interface IEvent {
+  type: string;
+}
 
 @Component({
   selector: 'app-recipes-list',
@@ -7,6 +12,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipesListComponent implements OnInit {
 
+  @Input() recepieList: Observable<any>;
+  @Output() foodEvent = new EventEmitter<IEvent>()
+
   constructor() {}
 
     // can i put the get request here or is a service better?
@@ -14,6 +22,21 @@ export class RecipesListComponent implements OnInit {
     // 
 
   ngOnInit() {
+    
+  }
+
+  getDinner() {
+    console.log('getDinner')
+    this.foodEvent.emit(<IEvent>({
+      type: 'dinner'
+    }))
+  }
+
+  getDessert() {
+    console.log('getDessert')
+    this.foodEvent.emit(<IEvent>({
+      type: 'dessert'
+    }))
   }
 
 }

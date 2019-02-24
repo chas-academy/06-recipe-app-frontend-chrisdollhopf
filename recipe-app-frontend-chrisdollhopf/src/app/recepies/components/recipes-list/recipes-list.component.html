@@ -1,3 +1,9 @@
-<h1>This is the homepage that loads todays recipes automatically</h1>
-<h2>Recipes can be filtered here</h2>
-<h3>Recipes can be save via a check box on each recipe []</h3>
+<div>
+    <button type="button" (click)="getDinner()">Dinner</button>
+    <button type="button" (click)="getDessert()">Dessert</button>
+    <ul>
+        <li *ngFor="let hit of (recepieList | async)?.hits">
+            {{ hit.recipe.label }}
+        </li>
+    </ul>
+</div>
